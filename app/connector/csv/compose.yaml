@@ -1,0 +1,16 @@
+services:
+  app_csv:
+    build:
+      context: .
+      dockerfile: .hasura-connector/Dockerfile
+    environment:
+      DUCKDB_URL: $APP_CSV_DUCKDB_URL
+      FEATURE_MIN_INSTANCES: $APP_CSV_FEATURE_MIN_INSTANCES
+      FEATURE_PERSISTENT_DATA: $APP_CSV_FEATURE_PERSISTENT_DATA
+      HASURA_SERVICE_TOKEN_SECRET: $APP_CSV_HASURA_SERVICE_TOKEN_SECRET
+      OTEL_EXPORTER_OTLP_ENDPOINT: $APP_CSV_OTEL_EXPORTER_OTLP_ENDPOINT
+      OTEL_SERVICE_NAME: $APP_CSV_OTEL_SERVICE_NAME
+    extra_hosts:
+      - local.hasura.dev:host-gateway
+    ports:
+      - 6772:8080

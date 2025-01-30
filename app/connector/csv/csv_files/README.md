@@ -1,0 +1,1 @@
+Just drop your CSV file(s) in this directory. It will be loaded into a DuckDB database.
