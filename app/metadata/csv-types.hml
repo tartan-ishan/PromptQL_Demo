@@ -1,0 +1,237 @@
+---
+kind: ScalarType
+version: v1
+definition:
+  name: BigInt
+  graphql:
+    typeName: BigInt
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: BigInt_bool_exp
+  operand:
+    scalar:
+      type: BigInt
+      comparisonOperators:
+        - name: _eq
+          argumentType: BigInt!
+        - name: _gt
+          argumentType: BigInt!
+        - name: _gte
+          argumentType: BigInt!
+        - name: _lt
+          argumentType: BigInt!
+        - name: _lte
+          argumentType: BigInt!
+        - name: _neq
+          argumentType: BigInt!
+      dataConnectorOperatorMapping:
+        - dataConnectorName: csv
+          dataConnectorScalarType: BigInt
+          operatorMapping: {}
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: BigInt_bool_exp
+
+---
+kind: DataConnectorScalarRepresentation
+version: v1
+definition:
+  dataConnectorName: csv
+  dataConnectorScalarType: BigInt
+  representation: BigInt
+  graphql:
+    comparisonExpressionTypeName: BigInt_comparison_exp
+
+---
+kind: DataConnectorScalarRepresentation
+version: v1
+definition:
+  dataConnectorName: csv
+  dataConnectorScalarType: String
+  representation: String
+  graphql:
+    comparisonExpressionTypeName: String_comparison_exp
+
+---
+kind: DataConnectorScalarRepresentation
+version: v1
+definition:
+  dataConnectorName: csv
+  dataConnectorScalarType: Float
+  representation: Float
+  graphql:
+    comparisonExpressionTypeName: Float_comparison_exp
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: String_bool_exp
+  operand:
+    scalar:
+      type: String
+      comparisonOperators:
+        - name: _eq
+          argumentType: String!
+        - name: _glob
+          argumentType: String!
+        - name: _gt
+          argumentType: String!
+        - name: _gte
+          argumentType: String!
+        - name: _like
+          argumentType: String!
+        - name: _lt
+          argumentType: String!
+        - name: _lte
+          argumentType: String!
+        - name: _neq
+          argumentType: String!
+      dataConnectorOperatorMapping:
+        - dataConnectorName: csv
+          dataConnectorScalarType: String
+          operatorMapping: {}
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: String_bool_exp
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: Float_bool_exp
+  operand:
+    scalar:
+      type: Float
+      comparisonOperators:
+        - name: _eq
+          argumentType: Float!
+        - name: _gt
+          argumentType: Float!
+        - name: _gte
+          argumentType: Float!
+        - name: _lt
+          argumentType: Float!
+        - name: _lte
+          argumentType: Float!
+        - name: _neq
+          argumentType: Float!
+      dataConnectorOperatorMapping:
+        - dataConnectorName: csv
+          dataConnectorScalarType: Float
+          operatorMapping: {}
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: Float_bool_exp
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: BigInt_agg_exp
+  operand:
+    scalar:
+      aggregatedType: BigInt
+      aggregationFunctions: []
+      dataConnectorAggregationFunctionMapping:
+        - dataConnectorName: csv
+          dataConnectorScalarType: BigInt
+          functionMapping: {}
+  count:
+    enable: true
+  countDistinct:
+    enable: true
+  graphql:
+    selectTypeName: BigInt_agg_exp
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: String_agg_exp
+  operand:
+    scalar:
+      aggregatedType: String
+      aggregationFunctions: []
+      dataConnectorAggregationFunctionMapping:
+        - dataConnectorName: csv
+          dataConnectorScalarType: String
+          functionMapping: {}
+  count:
+    enable: true
+  countDistinct:
+    enable: true
+  graphql:
+    selectTypeName: String_agg_exp
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: Float_agg_exp
+  operand:
+    scalar:
+      aggregatedType: Float
+      aggregationFunctions: []
+      dataConnectorAggregationFunctionMapping:
+        - dataConnectorName: csv
+          dataConnectorScalarType: Float
+          functionMapping: {}
+  count:
+    enable: true
+  countDistinct:
+    enable: true
+  graphql:
+    selectTypeName: Float_agg_exp
+
+---
+kind: OrderByExpression
+version: v1
+definition:
+  name: BigInt_order_by_exp
+  operand:
+    scalar:
+      orderedType: BigInt
+      enableOrderByDirections:
+        enableAll: true
+  graphql:
+    expressionTypeName: BigInt_order_by_exp
+
+---
+kind: OrderByExpression
+version: v1
+definition:
+  name: String_order_by_exp
+  operand:
+    scalar:
+      orderedType: String
+      enableOrderByDirections:
+        enableAll: true
+  graphql:
+    expressionTypeName: String_order_by_exp
+
+---
+kind: OrderByExpression
+version: v1
+definition:
+  name: Float_order_by_exp
+  operand:
+    scalar:
+      orderedType: Float
+      enableOrderByDirections:
+        enableAll: true
+  graphql:
+    expressionTypeName: Float_order_by_exp
+

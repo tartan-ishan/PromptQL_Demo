@@ -1,0 +1,6 @@
+product_id,category,rating,inventory,sales,brand,supplier,profit_margin
+1,Electronics,4.5,25,120,Brand B,Supplier X,26.99
+2,Clothing,4.0,50,200,Brand B,Supplier Z,25.2
+3,Home & Kitchen,4.2,30,150,Brand A,Supplier Y,32.96
+4,Books,4.8,100,300,Brand A,Supplier Y,18.21
+5,Toys,4.3,40,180,Brand C,Supplier X,21.35

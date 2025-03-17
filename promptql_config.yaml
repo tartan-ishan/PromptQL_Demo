@@ -1,0 +1,5 @@
+kind: PromptQlConfig
+version: v1
+definition:
+  llm:
+    provider: hasura

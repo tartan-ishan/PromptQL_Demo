@@ -14,16 +14,401 @@ definition:
   schema:
     version: v0.1
     schema:
-      scalar_types: {}
-      object_types: {}
-      collections: []
+      scalar_types:
+        BigInt:
+          representation:
+            type: biginteger
+          aggregate_functions: {}
+          comparison_operators:
+            _eq:
+              type: equal
+            _gt:
+              type: custom
+              argument_type:
+                type: named
+                name: BigInt
+            _gte:
+              type: custom
+              argument_type:
+                type: named
+                name: BigInt
+            _lt:
+              type: custom
+              argument_type:
+                type: named
+                name: BigInt
+            _lte:
+              type: custom
+              argument_type:
+                type: named
+                name: BigInt
+            _neq:
+              type: custom
+              argument_type:
+                type: named
+                name: BigInt
+        Boolean:
+          aggregate_functions: {}
+          comparison_operators:
+            _eq:
+              type: equal
+        Float:
+          aggregate_functions: {}
+          comparison_operators:
+            _eq:
+              type: equal
+            _gt:
+              type: custom
+              argument_type:
+                type: named
+                name: Float
+            _gte:
+              type: custom
+              argument_type:
+                type: named
+                name: Float
+            _lt:
+              type: custom
+              argument_type:
+                type: named
+                name: Float
+            _lte:
+              type: custom
+              argument_type:
+                type: named
+                name: Float
+            _neq:
+              type: custom
+              argument_type:
+                type: named
+                name: Float
+        HugeInt:
+          representation:
+            type: biginteger
+          aggregate_functions: {}
+          comparison_operators:
+            _eq:
+              type: equal
+            _gt:
+              type: custom
+              argument_type:
+                type: named
+                name: HugeInt
+            _gte:
+              type: custom
+              argument_type:
+                type: named
+                name: HugeInt
+            _lt:
+              type: custom
+              argument_type:
+                type: named
+                name: HugeInt
+            _lte:
+              type: custom
+              argument_type:
+                type: named
+                name: HugeInt
+            _neq:
+              type: custom
+              argument_type:
+                type: named
+                name: HugeInt
+        Int:
+          aggregate_functions: {}
+          comparison_operators:
+            _eq:
+              type: equal
+            _gt:
+              type: custom
+              argument_type:
+                type: named
+                name: Int
+            _gte:
+              type: custom
+              argument_type:
+                type: named
+                name: Int
+            _lt:
+              type: custom
+              argument_type:
+                type: named
+                name: Int
+            _lte:
+              type: custom
+              argument_type:
+                type: named
+                name: Int
+            _neq:
+              type: custom
+              argument_type:
+                type: named
+                name: Int
+        String:
+          aggregate_functions: {}
+          comparison_operators:
+            _eq:
+              type: equal
+            _glob:
+              type: custom
+              argument_type:
+                type: named
+                name: String
+            _gt:
+              type: custom
+              argument_type:
+                type: named
+                name: String
+            _gte:
+              type: custom
+              argument_type:
+                type: named
+                name: String
+            _like:
+              type: custom
+              argument_type:
+                type: named
+                name: String
+            _lt:
+              type: custom
+              argument_type:
+                type: named
+                name: String
+            _lte:
+              type: custom
+              argument_type:
+                type: named
+                name: String
+            _neq:
+              type: custom
+              argument_type:
+                type: named
+                name: String
+        Timestamp:
+          aggregate_functions: {}
+          comparison_operators:
+            _eq:
+              type: equal
+            _gt:
+              type: custom
+              argument_type:
+                type: named
+                name: Timestamp
+            _gte:
+              type: custom
+              argument_type:
+                type: named
+                name: Timestamp
+            _lt:
+              type: custom
+              argument_type:
+                type: named
+                name: Timestamp
+            _lte:
+              type: custom
+              argument_type:
+                type: named
+                name: Timestamp
+            _neq:
+              type: custom
+              argument_type:
+                type: named
+                name: Timestamp
+        UBigInt:
+          representation:
+            type: biginteger
+          aggregate_functions: {}
+          comparison_operators:
+            _eq:
+              type: equal
+            _gt:
+              type: custom
+              argument_type:
+                type: named
+                name: UBigInt
+            _gte:
+              type: custom
+              argument_type:
+                type: named
+                name: UBigInt
+            _lt:
+              type: custom
+              argument_type:
+                type: named
+                name: UBigInt
+            _lte:
+              type: custom
+              argument_type:
+                type: named
+                name: UBigInt
+            _neq:
+              type: custom
+              argument_type:
+                type: named
+                name: UBigInt
+        UHugeInt:
+          representation:
+            type: biginteger
+          aggregate_functions: {}
+          comparison_operators:
+            _eq:
+              type: equal
+            _gt:
+              type: custom
+              argument_type:
+                type: named
+                name: UHugeInt
+            _gte:
+              type: custom
+              argument_type:
+                type: named
+                name: UHugeInt
+            _lt:
+              type: custom
+              argument_type:
+                type: named
+                name: UHugeInt
+            _lte:
+              type: custom
+              argument_type:
+                type: named
+                name: UHugeInt
+            _neq:
+              type: custom
+              argument_type:
+                type: named
+                name: UHugeInt
+      object_types:
+        customer_orders:
+          description: No description available
+          fields:
+            customer_id:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: BigInt
+            order_status:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: String
+            payment_method:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: String
+            product_id:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: BigInt
+            purchase_date:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: String
+            purchase_price:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: Float
+        product_details:
+          description: No description available
+          fields:
+            brand:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: String
+            category:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: String
+            inventory:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: BigInt
+            product_id:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: BigInt
+            profit_margin:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: Float
+            rating:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: Float
+            sales:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: BigInt
+            supplier:
+              description: No description available
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: String
+      collections:
+        - name: customer_orders
+          description: No description available
+          arguments: {}
+          type: customer_orders
+          uniqueness_constraints: {}
+          foreign_keys: {}
+        - name: product_details
+          description: No description available
+          arguments: {}
+          type: product_details
+          uniqueness_constraints: {}
+          foreign_keys: {}
       functions: []
       procedures: []
     capabilities:
-      version: ""
+      version: 0.1.6
       capabilities:
-        query: {}
+        query:
+          aggregates: {}
+          variables: {}
+          nested_fields: {}
         mutation: {}
+        relationships:
+          relation_comparisons: {}
+          order_by_aggregate: {}
   argumentPresets:
     - argument: headers
       value:

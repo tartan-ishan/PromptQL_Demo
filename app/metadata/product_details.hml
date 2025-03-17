@@ -1,0 +1,184 @@
+---
+kind: ObjectType
+version: v1
+definition:
+  name: product_details
+  description: No description available
+  fields:
+    - name: brand
+      type: String
+      description: No description available
+    - name: category
+      type: String
+      description: No description available
+    - name: inventory
+      type: BigInt
+      description: No description available
+    - name: product_id
+      type: BigInt
+      description: No description available
+    - name: profit_margin
+      type: Float
+      description: No description available
+    - name: rating
+      type: Float
+      description: No description available
+    - name: sales
+      type: BigInt
+      description: No description available
+    - name: supplier
+      type: String
+      description: No description available
+  graphql:
+    typeName: product_details
+    inputTypeName: product_details_input
+  dataConnectorTypeMapping:
+    - dataConnectorName: csv
+      dataConnectorObjectType: product_details
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: product_details
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - brand
+          - category
+          - inventory
+          - product_id
+          - profit_margin
+          - rating
+          - sales
+          - supplier
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: product_details_bool_exp
+  operand:
+    object:
+      type: product_details
+      comparableFields:
+        - fieldName: brand
+          booleanExpressionType: String_bool_exp
+        - fieldName: category
+          booleanExpressionType: String_bool_exp
+        - fieldName: inventory
+          booleanExpressionType: BigInt_bool_exp
+        - fieldName: product_id
+          booleanExpressionType: BigInt_bool_exp
+        - fieldName: profit_margin
+          booleanExpressionType: Float_bool_exp
+        - fieldName: rating
+          booleanExpressionType: Float_bool_exp
+        - fieldName: sales
+          booleanExpressionType: BigInt_bool_exp
+        - fieldName: supplier
+          booleanExpressionType: String_bool_exp
+      comparableRelationships: []
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: product_details_bool_exp
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: product_details_agg_exp
+  operand:
+    object:
+      aggregatedType: product_details
+      aggregatableFields:
+        - fieldName: brand
+          aggregateExpression: String_agg_exp
+        - fieldName: category
+          aggregateExpression: String_agg_exp
+        - fieldName: inventory
+          aggregateExpression: BigInt_agg_exp
+        - fieldName: product_id
+          aggregateExpression: BigInt_agg_exp
+        - fieldName: profit_margin
+          aggregateExpression: Float_agg_exp
+        - fieldName: rating
+          aggregateExpression: Float_agg_exp
+        - fieldName: sales
+          aggregateExpression: BigInt_agg_exp
+        - fieldName: supplier
+          aggregateExpression: String_agg_exp
+  count:
+    enable: true
+  graphql:
+    selectTypeName: product_details_agg_exp
+
+---
+kind: OrderByExpression
+version: v1
+definition:
+  name: product_details_order_by_exp
+  operand:
+    object:
+      orderedType: product_details
+      orderableFields:
+        - fieldName: brand
+          orderByExpression: String_order_by_exp
+        - fieldName: category
+          orderByExpression: String_order_by_exp
+        - fieldName: inventory
+          orderByExpression: BigInt_order_by_exp
+        - fieldName: product_id
+          orderByExpression: BigInt_order_by_exp
+        - fieldName: profit_margin
+          orderByExpression: Float_order_by_exp
+        - fieldName: rating
+          orderByExpression: Float_order_by_exp
+        - fieldName: sales
+          orderByExpression: BigInt_order_by_exp
+        - fieldName: supplier
+          orderByExpression: String_order_by_exp
+      orderableRelationships: []
+  graphql:
+    expressionTypeName: product_details_order_by_exp
+
+---
+kind: Model
+version: v2
+definition:
+  name: product_details
+  objectType: product_details
+  source:
+    dataConnectorName: csv
+    collection: product_details
+  filterExpressionType: product_details_bool_exp
+  aggregateExpression: product_details_agg_exp
+  orderByExpression: product_details_order_by_exp
+  graphql:
+    selectMany:
+      queryRootField: product_details
+      subscription:
+        rootField: product_details
+    selectUniques: []
+    filterInputTypeName: product_details_filter_input
+    aggregate:
+      queryRootField: product_details_aggregate
+      subscription:
+        rootField: product_details_aggregate
+  description: No description available
+
+---
+kind: ModelPermissions
+version: v1
+definition:
+  modelName: product_details
+  permissions:
+    - role: admin
+      select:
+        filter: null
+        allowSubscriptions: true
+
