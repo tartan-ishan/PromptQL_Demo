@@ -15,7 +15,7 @@ You'll need the Hasura CLI (authenticated via a Hasura account) and Docker insta
 **Step 1: Clone the project**
 
 ```bash copy
-git clone git@github.com:hasura/csv-promptql.git
+git clone https://github.com/hasura/csv-promptql.git
 cd csv-promptql
 ```
 
