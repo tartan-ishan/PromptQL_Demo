@@ -1,6 +1,16 @@
 product_id,category,rating,inventory,sales,brand,supplier,profit_margin
-1,Electronics,4.5,25,120,Brand B,Supplier X,26.99
-2,Clothing,4.0,50,200,Brand B,Supplier Z,25.2
-3,Home & Kitchen,4.2,30,150,Brand A,Supplier Y,32.96
-4,Books,4.8,100,300,Brand A,Supplier Y,18.21
-5,Toys,4.3,40,180,Brand C,Supplier X,21.35
+1,Clothing,3.6,144,238,Brand B,Supplier Y,11.46
+2,Books,3.7,147,300,Brand C,Supplier X,33.89
+3,Home & Kitchen,4.8,52,295,Brand C,Supplier Z,45.69
+4,Books,4.0,93,240,Brand B,Supplier Z,11.31
+5,Books,4.7,29,440,Brand C,Supplier Y,47.11
+6,Home & Kitchen,4.0,195,442,Brand C,Supplier X,12.04
+7,Toys,3.9,101,462,Brand B,Supplier Y,9.83
+8,Toys,4.5,170,212,Brand B,Supplier X,17.31
+9,Home & Kitchen,4.4,179,51,Brand B,Supplier Z,22.25
+10,Books,4.6,147,316,Brand B,Supplier Y,23.29
+11,Home & Kitchen,4.3,62,291,Brand A,Supplier Y,33.83
+12,Books,3.6,171,55,Brand C,Supplier X,21.32
+13,Toys,4.4,51,449,Brand A,Supplier X,18.11
+14,Electronics,4.6,32,476,Brand A,Supplier Y,6.75
+15,Home & Kitchen,4.8,66,467,Brand B,Supplier Y,49.28
